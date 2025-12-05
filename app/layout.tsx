@@ -54,6 +54,9 @@ export default function RootLayout({
 }) {
   return (
     <html lang="es" className="scroll-smooth" suppressHydrationWarning>
+      <head>
+        <link rel="icon" href="/favicon.png" sizes="any" />
+      </head>
       <body
         className={`${montserrat.variable} ${alias.variable} ${playfair.variable} font-montserrat antialiased bg-slate-950 text-slate-50 selection:bg-blue-500/30 selection:text-slate-50`}
       >
