@@ -15,12 +15,12 @@ const montserrat = Montserrat({
 const alias = localFont({
   src: [
     {
-      path: "../public/fonts/alias-regular.otf",
+      path: "/fonts/alias-regular.otf",
       weight: "400",
       style: "normal",
     },
     {
-      path: "../public/fonts/alias-bold.otf",
+      path: "/fonts/alias-bold.otf",
       weight: "700",
       style: "normal",
     },
@@ -32,7 +32,7 @@ const alias = localFont({
 const playfair = localFont({
   src: [
     {
-      path: "../public/fonts/PlayfairDisplayItalic.woff2",
+      path: "/fonts/PlayfairDisplayItalic.woff2",
       weight: "400",
       style: "italic",
     },
