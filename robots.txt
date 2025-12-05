@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+sitemap: https://www.baratos1.es/sitemap.xml
