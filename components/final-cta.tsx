@@ -6,19 +6,13 @@ import { ArrowRight } from "lucide-react"
 
 export function FinalCTA() {
   const handleCTAClick = () => {
-    // TODO: Reemplazar con tu URL de formulario/calendario (ej: Calendly, Google Forms, etc.)
-    // Ejemplo: window.open('https://calendly.com/tu-usuario/consultoria', '_blank')
-    // O abrir un modal de formulario: setShowFormModal(true)
-    
-    // Por ahora, redirige a un formulario de contacto o calendario
-    // Puedes cambiar esta URL por la de tu sistema de reservas
-    window.open('https://calendly.com', '_blank')
+    window.location.href = "/consultoria"
   }
 
   return (
-    <section id="agenda" className="py-32 px-4 relative z-20 overflow-hidden">
-      <div className="absolute inset-0 bg-gradient-to-r from-[#1D4ED8] via-[#3B82F6] to-[#1D4ED8] opacity-20" />
-      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(29,78,216,0.3),transparent_70%)]" />
+    <section id="agenda" className="py-32 px-4 relative z-20 overflow-hidden bg-slate-950">
+      <div className="absolute inset-0 bg-[radial-gradient(circle_at_50%_50%,rgba(59,130,246,0.15),transparent_70%)]" />
+      <div className="absolute inset-0 border-t border-b border-[#1D4ED8]/20" />
       
       <div className="container mx-auto text-center relative z-10">
         <motion.div
@@ -45,7 +39,7 @@ export function FinalCTA() {
           <Button
             onClick={handleCTAClick}
             size="lg"
-            className="bg-white text-[#1D4ED8] hover:bg-gray-100 text-xl px-12 py-8 rounded-lg shadow-2xl hover:shadow-[#3B82F6]/50 transition-all duration-300 hover:scale-105 font-alias font-bold"
+            className="bg-[#1D4ED8] hover:bg-[#3B82F6] text-white text-xl px-12 py-8 rounded-lg shadow-2xl shadow-[#1D4ED8]/50 hover:shadow-[#3B82F6]/50 hover:shadow-[0_0_45px_rgba(59,130,246,0.35)] transition-all duration-300 hover:scale-105 font-alias font-bold"
           >
             <span>
               Agendar Consultoría

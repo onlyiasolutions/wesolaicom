@@ -28,7 +28,7 @@ const processes = [
 
 export function ProcessSection() {
   return (
-    <section className="py-24 px-4 relative z-20 bg-gradient-to-b from-transparent via-[#0F172A]/30 to-transparent">
+    <section className="py-24 px-4 relative z-20 bg-slate-950">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -67,7 +67,7 @@ export function ProcessSection() {
                 className="text-center"
               >
                 <div className="mb-6 flex justify-center">
-                  <div className="w-20 h-20 rounded-full bg-gradient-to-r from-[#1D4ED8] to-[#3B82F6] flex items-center justify-center shadow-lg shadow-[#1D4ED8]/50">
+                  <div className="w-20 h-20 rounded-full bg-[#1D4ED8] hover:bg-[#3B82F6] flex items-center justify-center shadow-lg shadow-[#1D4ED8]/50 shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-300">
                     <Icon className="h-10 w-10 text-white" />
                   </div>
                 </div>

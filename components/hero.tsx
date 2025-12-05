@@ -31,7 +31,7 @@ export function Hero() {
           className="text-5xl md:text-7xl font-alias font-bold mb-6"
           style={{
             color: "#ffffff",
-            background: "linear-gradient(to right, #ffffff, #e5f0ff, #3B82F6)",
+            background: "linear-gradient(to right, #ffffff, #3B82F6)",
             WebkitBackgroundClip: "text",
             WebkitTextFillColor: "transparent",
             backgroundClip: "text",
@@ -61,7 +61,7 @@ export function Hero() {
           <Link href="/consultoria">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-[#1D4ED8] to-[#3B82F6] hover:from-[#3B82F6] hover:to-[#1D4ED8] text-white text-lg px-8 py-6 rounded-lg shadow-lg shadow-[#1D4ED8]/50 hover:shadow-xl hover:shadow-[#3B82F6]/50 transition-all duration-300 hover:scale-105"
+              className="bg-[#1D4ED8] hover:bg-[#3B82F6] text-white text-lg px-8 py-6 rounded-lg shadow-lg shadow-[#1D4ED8]/50 hover:shadow-xl hover:shadow-[#3B82F6]/50 transition-all duration-300 hover:scale-105"
             >
               Agendar Consultoría
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -88,15 +88,15 @@ export function Hero() {
           className="flex flex-wrap justify-center gap-8 text-sm md:text-base"
         >
           <div className="flex items-center gap-2 text-gray-300">
-            <CheckCircle2 className="h-5 w-5 text-[#3B82F6]" />
+            <CheckCircle2 className="h-5 w-5 text-gray-300" />
             <span className="font-montserrat font-medium">+50 proyectos analizados</span>
           </div>
           <div className="flex items-center gap-2 text-gray-300">
-            <CheckCircle2 className="h-5 w-5 text-[#3B82F6]" />
+            <CheckCircle2 className="h-5 w-5 text-gray-300" />
             <span className="font-montserrat font-medium">98% satisfacción</span>
           </div>
           <div className="flex items-center gap-2 text-gray-300">
-            <CheckCircle2 className="h-5 w-5 text-[#3B82F6]" />
+            <CheckCircle2 className="h-5 w-5 text-gray-300" />
             <span className="font-montserrat font-medium">3x ROI medio en 6–12 meses</span>
           </div>
         </motion.div>

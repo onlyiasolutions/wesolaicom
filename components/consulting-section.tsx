@@ -30,7 +30,7 @@ const steps = [
 export function ConsultingSection() {
 
   return (
-    <section className="py-24 px-4 relative z-20 bg-gradient-to-b from-transparent via-[#0F172A]/50 to-transparent">
+    <section className="py-24 px-4 relative z-20 bg-slate-950">
       <div className="container mx-auto">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -54,7 +54,7 @@ export function ConsultingSection() {
           <p className="text-xl text-gray-400 font-montserrat max-w-3xl mx-auto mb-6">
             Transformamos tu empresa en 3 pasos claros y medibles
           </p>
-          <div className="inline-block bg-gradient-to-r from-[#0A1A3A] to-[#1E3A8A] text-white px-6 py-3 rounded-full font-montserrat font-semibold shadow-lg shadow-black/30">
+          <div className="inline-block bg-[#020617]/90 border border-[#1D4ED8]/40 text-white px-6 py-3 rounded-full font-montserrat font-semibold shadow-lg shadow-black/30 shadow-[0_0_30px_rgba(59,130,246,0.25)]">
             Primera consultoría 100% gratuita
           </div>
         </motion.div>
@@ -70,13 +70,13 @@ export function ConsultingSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
               >
-                <Card className="bg-[#0F172A]/50 border-[#1D4ED8]/30 hover:border-[#3B82F6]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#1D4ED8]/20 h-full">
+                <Card className="bg-[#020617]/90 border border-white/5 border-[#1D4ED8]/20 hover:border-[#1D4ED8]/40 transition-all duration-300 hover:shadow-[0_18px_60px_rgba(0,0,0,0.65)] hover:shadow-[0_0_45px_rgba(59,130,246,0.25)] ring-1 ring-[#1D4ED8]/30 h-full">
                   <CardHeader>
                     <div className="flex items-center gap-4 mb-4">
-                      <div className="w-12 h-12 rounded-full bg-gradient-to-r from-[#1D4ED8] to-[#3B82F6] flex items-center justify-center text-white font-bold text-lg">
+                      <div className="w-12 h-12 rounded-full bg-[#1D4ED8] hover:bg-[#3B82F6] flex items-center justify-center text-white font-bold text-lg shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300">
                         {step.number}
                       </div>
-                      <Icon className="h-8 w-8 text-[#3B82F6]" />
+                      <Icon className="h-8 w-8 text-gray-300" />
                     </div>
                     <CardTitle className="text-2xl font-alias text-white">
                       {step.title}
@@ -103,7 +103,7 @@ export function ConsultingSection() {
           <Link href="/consultoria">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-[#1D4ED8] to-[#3B82F6] hover:from-[#3B82F6] hover:to-[#1D4ED8] text-white text-lg px-8 py-6 rounded-lg shadow-lg shadow-[#1D4ED8]/50 hover:shadow-xl hover:shadow-[#3B82F6]/50 transition-all duration-300 hover:scale-105"
+              className="bg-[#1D4ED8] hover:bg-[#3B82F6] text-white text-lg px-8 py-6 rounded-lg shadow-lg shadow-[#1D4ED8]/50 hover:shadow-xl hover:shadow-[#3B82F6]/50 transition-all duration-300 hover:scale-105"
             >
               Agendar Consultoría Gratuita
             </Button>

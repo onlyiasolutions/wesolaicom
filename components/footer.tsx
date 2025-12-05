@@ -57,18 +57,27 @@ export function Footer() {
             <ul className="space-y-2">
               <li>
                 <Link href="/aviso-legal" className="text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm transition-colors">
-                  Aviso Legal
+                  Aviso Legal y Términos de Servicio
                 </Link>
               </li>
               <li>
-                <Link href="/privacidad" className="text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm transition-colors">
+                <Link href="/politica-privacidad" className="text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm transition-colors">
                   Política de Privacidad
                 </Link>
               </li>
               <li>
-                <Link href="/cookies" className="text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm transition-colors">
+                <Link href="/politica-cookies" className="text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm transition-colors">
                   Política de Cookies
                 </Link>
+              </li>
+              <li>
+                <a
+                  href="#"
+                  data-cky-toggle="preferences"
+                  className="text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm transition-colors"
+                >
+                  Configuración de Cookies
+                </a>
               </li>
             </ul>
           </div>

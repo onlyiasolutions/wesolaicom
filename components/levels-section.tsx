@@ -92,10 +92,10 @@ export function LevelsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="bg-[#0F172A]/50 border-[#1D4ED8]/30 hover:border-[#3B82F6]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#1D4ED8]/20">
+              <Card className="bg-[#020617]/90 border border-white/5 border-[#1D4ED8]/20 hover:border-[#1D4ED8]/40 transition-all duration-300 hover:shadow-[0_18px_60px_rgba(0,0,0,0.65)] hover:shadow-[0_0_45px_rgba(59,130,246,0.25)] ring-1 ring-[#1D4ED8]/30">
                 <CardHeader>
                   <div className="flex items-center justify-between mb-2">
-                    <Badge variant="default" className="bg-[#1D4ED8] text-white">
+                    <Badge variant="default" className="bg-[#1D4ED8] text-white shadow-[0_0_20px_rgba(59,130,246,0.3)]">
                       Nivel {level.level}
                     </Badge>
                   </div>
@@ -107,12 +107,12 @@ export function LevelsSection() {
                   <ul className="space-y-3 mb-6">
                     {level.bullets.map((bullet, i) => (
                       <li key={i} className="flex items-start gap-2 text-gray-300 font-montserrat">
-                        <Check className="h-5 w-5 text-[#3B82F6] mt-0.5 flex-shrink-0" />
+                        <Check className="h-5 w-5 text-gray-300 mt-0.5 flex-shrink-0" />
                         <span>{bullet}</span>
                       </li>
                     ))}
                   </ul>
-                  <p className="text-sm text-gray-400 font-montserrat italic border-t border-[#1D4ED8]/30 pt-4">
+                  <p className="text-sm text-gray-400 font-montserrat italic border-t border-white/5 border-[#1D4ED8]/20 pt-4">
                     Te ayudamos a pasar de tu Nivel {level.level} actual al siguiente escalón de madurez en IA.
                   </p>
                 </CardContent>
@@ -131,7 +131,7 @@ export function LevelsSection() {
           <Link href="/consultoria">
             <Button
               size="lg"
-              className="bg-gradient-to-r from-[#1D4ED8] to-[#3B82F6] hover:from-[#3B82F6] hover:to-[#1D4ED8] text-white text-lg px-8 py-6 rounded-lg shadow-lg shadow-[#1D4ED8]/50 hover:shadow-xl hover:shadow-[#3B82F6]/50 transition-all duration-300 hover:scale-105"
+              className="bg-[#1D4ED8] hover:bg-[#3B82F6] text-white text-lg px-8 py-6 rounded-lg shadow-lg shadow-[#1D4ED8]/50 hover:shadow-xl hover:shadow-[#3B82F6]/50 transition-all duration-300 hover:scale-105"
             >
               Quiero subir de nivel
             </Button>

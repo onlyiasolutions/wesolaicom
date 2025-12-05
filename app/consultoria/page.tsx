@@ -65,7 +65,7 @@ export default function ConsultoriaPage() {
 
   if (submitted) {
     return (
-      <main className="min-h-screen bg-[#020617] text-white flex items-center justify-center px-4 relative z-20">
+      <main className="min-h-screen bg-[#020617] text-white flex items-center justify-center px-4 relative z-20 page-fade">
         <div className="max-w-xl w-full rounded-2xl border border-[#1D4ED8]/30 bg-[#0F172A]/90 p-8 shadow-xl">
           <h1 className="text-2xl md:text-3xl font-semibold mb-4">
             Solicitud enviada
@@ -87,7 +87,7 @@ export default function ConsultoriaPage() {
   }
 
   return (
-    <main className="min-h-screen bg-[#020617] text-white flex items-center justify-center px-4 py-12 relative z-20">
+    <main className="min-h-screen bg-[#020617] text-white flex items-center justify-center px-4 py-12 relative z-20 page-fade">
       <div className="max-w-xl w-full rounded-2xl border border-[#1D4ED8]/30 bg-[#0F172A]/90 p-8 shadow-xl">
         <div className="w-full flex justify-center mb-6">
           <img

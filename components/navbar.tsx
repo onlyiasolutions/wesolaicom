@@ -2,12 +2,15 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
+import { usePathname, useRouter } from "next/navigation"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 
 export function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false)
+  const pathname = usePathname()
+  const router = useRouter()
 
   useEffect(() => {
     const handleScroll = () => {
@@ -28,7 +31,16 @@ export function Navbar() {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-16 md:h-20">
-          <div className="flex items-center cursor-pointer" onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}>
+          <div
+            className="flex items-center cursor-pointer"
+            onClick={() => {
+              if (pathname === "/") {
+                window.scrollTo({ top: 0, behavior: "smooth" })
+              } else {
+                router.push("/")
+              }
+            }}
+          >
             <img
               src="/logos/logo_white.png"
               alt="SolAI Logo"
@@ -38,21 +50,32 @@ export function Navbar() {
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
-            <a
-              href="#solvers"
-              className="text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
-            >
-              Solvers
-            </a>
-            <a
-              href="#faq"
-              className="text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
-            >
-              FAQ
-            </a>
+            {pathname === "/" ? (
+              <>
+                <a
+                  href="#solvers"
+                  className="text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
+                >
+                  Solvers
+                </a>
+                <a
+                  href="#faq"
+                  className="text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
+                >
+                  FAQ
+                </a>
+              </>
+            ) : (
+              <a
+                href="/"
+                className="text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
+              >
+                Inicio
+              </a>
+            )}
             <Link href="/consultoria">
               <Button
-                className="bg-gradient-to-r from-[#1D4ED8] to-[#3B82F6] hover:from-[#3B82F6] hover:to-[#1D4ED8] text-white"
+                className="bg-[#1D4ED8] hover:bg-[#3B82F6] text-white"
               >
                 Agendar Consultoría
               </Button>
@@ -71,24 +94,36 @@ export function Navbar() {
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
           <div className="md:hidden pb-4 space-y-4">
-            <a
-              href="#solvers"
-              className="block text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              Solvers
-            </a>
-            <a
-              href="#faq"
-              className="block text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
-              onClick={() => setIsMobileMenuOpen(false)}
-            >
-              FAQ
-            </a>
+            {pathname === "/" ? (
+              <>
+                <a
+                  href="#solvers"
+                  className="block text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  Solvers
+                </a>
+                <a
+                  href="#faq"
+                  className="block text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
+                  onClick={() => setIsMobileMenuOpen(false)}
+                >
+                  FAQ
+                </a>
+              </>
+            ) : (
+              <a
+                href="/"
+                className="block text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
+                onClick={() => setIsMobileMenuOpen(false)}
+              >
+                Inicio
+              </a>
+            )}
             <Link href="/consultoria" className="w-full">
               <Button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full bg-gradient-to-r from-[#1D4ED8] to-[#3B82F6] hover:from-[#3B82F6] hover:to-[#1D4ED8] text-white"
+                className="w-full bg-[#1D4ED8] hover:bg-[#3B82F6] text-white"
               >
                 Agendar Consultoría
               </Button>

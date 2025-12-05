@@ -77,10 +77,10 @@ export function SolversGrid() {
                 transition={{ duration: 0.6, delay: index * 0.1 }}
                 whileHover={{ scale: 1.02 }}
               >
-                <Card className="bg-[#0F172A]/50 border-[#1D4ED8]/30 hover:border-[#3B82F6]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#1D4ED8]/20 h-full">
+                <Card className="bg-[#020617]/90 border border-white/5 border-[#1D4ED8]/20 hover:border-[#1D4ED8]/40 transition-all duration-300 hover:shadow-[0_18px_60px_rgba(0,0,0,0.65)] hover:shadow-[0_0_45px_rgba(59,130,246,0.25)] ring-1 ring-[#1D4ED8]/30 h-full">
                   <CardHeader>
                     <div className="flex items-center gap-3 mb-2">
-                      <Icon className="h-6 w-6 text-[#3B82F6]" />
+                      <Icon className="h-6 w-6 text-gray-300" />
                       <CardTitle
                         className="text-2xl font-alias text-white"
                         style={{ textShadow: "0 2px 4px rgba(0,0,0,0.35), 0 6px 12px rgba(0,0,0,0.25)" }}
@@ -88,7 +88,7 @@ export function SolversGrid() {
                         {solver.name}
                       </CardTitle>
                     </div>
-                    <CardDescription className="text-[#3B82F6] font-montserrat font-semibold">
+                    <CardDescription className="text-gray-300 font-montserrat font-semibold">
                       {solver.role}
                     </CardDescription>
                   </CardHeader>
@@ -98,10 +98,10 @@ export function SolversGrid() {
                         <p className="text-sm text-gray-400 font-montserrat mb-2">Problema que resuelve:</p>
                         <p className="text-gray-300 font-montserrat">{solver.problem}</p>
                       </div>
-                      <div className="bg-gradient-to-r from-[#1D4ED8]/20 to-[#3B82F6]/20 rounded-lg p-4 border border-[#3B82F6]/30">
+                      <div className="bg-[#020617]/90 rounded-lg p-4 border border-[#1D4ED8]/40 shadow-[0_0_20px_rgba(59,130,246,0.2)]">
                         <p className="text-sm text-gray-400 font-montserrat mb-1">Resultado esperado:</p>
                         <p
-                          className="text-xl font-alias font-bold text-[#3B82F6]"
+                          className="text-xl font-alias font-bold text-gray-100"
                           style={{ textShadow: "0 2px 4px rgba(0,0,0,0.35), 0 6px 12px rgba(0,0,0,0.25)" }}
                         >
                           {solver.result}

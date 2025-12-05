@@ -11,7 +11,7 @@ import { Footer } from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="relative z-10 min-h-screen pt-24">
+    <main className="relative z-10 min-h-screen pt-24 page-fade">
       <Navbar />
       <Hero />
       <LevelsSection />

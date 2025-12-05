@@ -70,11 +70,11 @@ export function TestimonialsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="bg-[#0F172A]/50 border-[#1D4ED8]/30 hover:border-[#3B82F6]/50 transition-all duration-300 hover:shadow-lg hover:shadow-[#1D4ED8]/20 h-full">
+              <Card className="bg-[#020617]/90 border border-white/5 border-[#1D4ED8]/20 hover:border-[#1D4ED8]/40 transition-all duration-300 hover:shadow-[0_18px_60px_rgba(0,0,0,0.65)] hover:shadow-[0_0_45px_rgba(59,130,246,0.25)] ring-1 ring-[#1D4ED8]/30 h-full">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Avatar className="h-12 w-12">
-                      <AvatarFallback className="bg-gradient-to-r from-[#1D4ED8] to-[#3B82F6] text-white">
+                      <AvatarFallback className="bg-[#1D4ED8] hover:bg-[#3B82F6] text-white shadow-[0_0_15px_rgba(59,130,246,0.3)] transition-all duration-300">
                         {testimonial.name.split(' ').map(n => n[0]).join('')}
                       </AvatarFallback>
                     </Avatar>
@@ -86,7 +86,7 @@ export function TestimonialsSection() {
                   
                   <div className="flex gap-1 mb-4">
                     {[...Array(testimonial.rating)].map((_, i) => (
-                      <Star key={i} className="h-4 w-4 fill-[#3B82F6] text-[#3B82F6]" />
+                      <Star key={i} className="h-4 w-4 fill-[#FACC15] text-[#FACC15]" />
                     ))}
                   </div>
 
@@ -94,7 +94,7 @@ export function TestimonialsSection() {
                     &ldquo;{testimonial.content}&rdquo;
                   </p>
 
-                  <Badge variant="secondary" className="bg-[#1D4ED8]/30 text-[#3B82F6] border-[#3B82F6]/30">
+                  <Badge variant="secondary" className="bg-[#020617]/90 text-gray-100 border border-[#1D4ED8]/40 shadow-[0_0_15px_rgba(59,130,246,0.2)]">
                     {testimonial.metric}
                   </Badge>
                 </CardContent>
