@@ -82,9 +82,9 @@ export default function ConsultoriaPage() {
             Solicitud enviada
           </h1>
           <p className="text-gray-300 mb-6">
-            Gracias por solicitar una consultoría con SolAI. Hemos recibido tus
-            datos y nos pondremos en contacto contigo en breve para coordinar
-            el día y la hora.
+            Gracias por solicitar una consultoría con SolAI. Hemos recibido tus datos y te contactaremos en breve para coordinar día y hora.<br /><br />
+            Revisa tu correo (y la carpeta de spam) y añade <strong>hola@wesolai.com</strong> a tus contactos para no perderte ningún mensaje.<br /><br />
+            ¿Dudas? Llámanos al <strong>+34 919 93 30 75</strong>.
           </p>
           <a
             href="/"
