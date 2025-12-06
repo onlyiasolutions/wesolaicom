@@ -62,6 +62,8 @@ export default function ConsultoriaPage() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
+
+    // Dispara la animación de salida del formulario
     setIsTransitioning(true)
 
     await fetch("https://n8n.srv975799.hstgr.cloud/webhook/180529e0-483f-4b3b-bbd4-37dab164aba7", {
@@ -72,9 +74,9 @@ export default function ConsultoriaPage() {
       body: JSON.stringify(formData),
     })
 
+    // Después de la animación, mostramos la pantalla de confirmación
     setTimeout(() => {
       setSubmitted(true)
-      setIsTransitioning(false)
     }, 220)
   }
 
