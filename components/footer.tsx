@@ -74,7 +74,7 @@ export function Footer() {
                 <a
                   href="#"
                   data-cky-toggle="preferences"
-                  className="link-anim text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm"
+                  className="cky-banner-element link-anim text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm"
                 >
                   Configuración de Cookies
                 </a>
