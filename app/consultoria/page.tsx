@@ -62,6 +62,7 @@ export default function ConsultoriaPage() {
 
   const handleSubmit = async (e: FormEvent) => {
     e.preventDefault()
+    setIsTransitioning(true)
 
     await fetch("https://n8n.srv975799.hstgr.cloud/webhook/180529e0-483f-4b3b-bbd4-37dab164aba7", {
       method: "POST",
@@ -71,7 +72,10 @@ export default function ConsultoriaPage() {
       body: JSON.stringify(formData),
     })
 
-    setSubmitted(true)
+    setTimeout(() => {
+      setSubmitted(true)
+      setIsTransitioning(false)
+    }, 220)
   }
 
   if (submitted) {
@@ -82,9 +86,9 @@ export default function ConsultoriaPage() {
             Solicitud enviada
           </h1>
           <p className="text-gray-300 mb-6">
-            Gracias por solicitar una consultoría con SolAI. Hemos recibido tus datos y te contactaremos en breve para coordinar día y hora.<br /><br />
-            Revisa tu correo (y la carpeta de spam) y añade <strong>hola@wesolai.com</strong> a tus contactos para no perderte ningún mensaje.<br /><br />
-            ¿Dudas? Llámanos al <strong>+34 919 93 30 75</strong>.
+            Gracias por rellenar el formulario de consultoría con SolAI.<br /><br />
+            Revisa tu bandeja de entrada y también la carpeta de <strong>spam / correo no deseado</strong>. Para evitar que nuestros mensajes se pierdan, añade <strong>hola@wesolai.com</strong> a tus contactos.<br /><br />
+            ¿Dudas urgentes? Puedes llamarnos al <strong>+34 919 93 30 75</strong>.
           </p>
           <a
             href="/"
