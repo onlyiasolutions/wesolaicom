@@ -64,23 +64,6 @@ export default function Footer() {
                 <a
                   href="#"
                   className="cky-banner-element hover:text-white transition link-anim cursor-pointer"
-                  onClick={(e) => {
-                    e.preventDefault();
-                    if (typeof document !== "undefined") {
-                      const cookies = document.cookie.split(";");
-                      cookies.forEach((cookie) => {
-                        const [rawName] = cookie.split("=");
-                        const name = rawName.trim();
-                        if (
-                          name.toLowerCase().startsWith("cookieyes") ||
-                          name.toLowerCase().startsWith("cky")
-                        ) {
-                          document.cookie = `${name}=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/`;
-                        }
-                      });
-                      window.location.reload();
-                    }
-                  }}
                 >
                   Configuración de cookies
                 </a>
