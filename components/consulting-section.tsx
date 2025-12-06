@@ -70,7 +70,7 @@ export function ConsultingSection() {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6, delay: index * 0.2 }}
               >
-                <Card className="bg-[#020617]/90 border border-white/5 border-[#1D4ED8]/20 hover:border-[#1D4ED8]/40 transition-all duration-300 hover:shadow-[0_18px_60px_rgba(0,0,0,0.65)] hover:shadow-[0_0_45px_rgba(59,130,246,0.25)] ring-1 ring-[#1D4ED8]/30 h-full">
+                <Card className="bg-[#020617]/90 border border-white/5 border-[#1D4ED8]/20 hover:border-[#1D4ED8]/50 transition-all duration-300 hover:shadow-[0_18px_60px_rgba(0,0,0,0.75)] hover:shadow-[0_0_50px_rgba(59,130,246,0.4)] ring-1 ring-[#1D4ED8]/30 hover:ring-[#1D4ED8]/50 hover:scale-[1.02] h-full">
                   <CardHeader>
                     <div className="flex items-center gap-4 mb-4">
                       <div className="w-12 h-12 rounded-full bg-[#1D4ED8] hover:bg-[#3B82F6] flex items-center justify-center text-white font-bold text-lg shadow-[0_0_20px_rgba(59,130,246,0.4)] transition-all duration-300">
@@ -103,7 +103,7 @@ export function ConsultingSection() {
           <Link href="/consultoria">
             <Button
               size="lg"
-              className="bg-[#1D4ED8] hover:bg-[#3B82F6] text-white text-lg px-8 py-6 rounded-lg shadow-lg shadow-[#1D4ED8]/50 hover:shadow-xl hover:shadow-[#3B82F6]/50 transition-all duration-300 hover:scale-105"
+              className="btn-anim font-montserrat bg-[#1D4ED8] hover:bg-[#3B82F6] text-white text-sm md:text-lg px-6 md:px-8 py-4 md:py-6 rounded-lg shadow-lg shadow-[#1D4ED8]/50"
             >
               Agendar Consultoría Gratuita
             </Button>

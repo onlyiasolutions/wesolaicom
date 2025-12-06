@@ -70,7 +70,7 @@ export function TestimonialsSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.6, delay: index * 0.1 }}
             >
-              <Card className="bg-[#020617]/90 border border-white/5 border-[#1D4ED8]/20 hover:border-[#1D4ED8]/40 transition-all duration-300 hover:shadow-[0_18px_60px_rgba(0,0,0,0.65)] hover:shadow-[0_0_45px_rgba(59,130,246,0.25)] ring-1 ring-[#1D4ED8]/30 h-full">
+              <Card className="bg-[#020617]/90 border border-white/5 border-[#1D4ED8]/20 hover:border-[#1D4ED8]/50 transition-all duration-300 hover:shadow-[0_18px_60px_rgba(0,0,0,0.75)] hover:shadow-[0_0_50px_rgba(59,130,246,0.4)] ring-1 ring-[#1D4ED8]/30 hover:ring-[#1D4ED8]/50 hover:scale-[1.02] h-full">
                 <CardContent className="pt-6">
                   <div className="flex items-center gap-3 mb-4">
                     <Avatar className="h-12 w-12">

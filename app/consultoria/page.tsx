@@ -295,7 +295,7 @@ export default function ConsultoriaPage() {
               <button
                 type="button"
                 onClick={() => (window.location.href = "/")}
-                className="text-sm text-gray-300 hover:text-white flex items-center gap-2"
+                className="link-anim text-sm text-gray-300 hover:text-white flex items-center gap-2 font-montserrat"
               >
                 ← Inicio
               </button>
@@ -303,7 +303,7 @@ export default function ConsultoriaPage() {
               <button
                 type="button"
                 onClick={handleBack}
-                className="text-sm text-gray-300 hover:text-white flex items-center gap-2"
+                className="link-anim text-sm text-gray-300 hover:text-white flex items-center gap-2 font-montserrat"
               >
                 ← Atrás
               </button>
@@ -314,7 +314,7 @@ export default function ConsultoriaPage() {
               <button
                 type="button"
                 onClick={handleNext}
-                className="inline-flex items-center justify-center rounded-full bg-[#1D4ED8] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#3B82F6] transition"
+                className="btn-anim font-montserrat inline-flex items-center justify-center rounded-full bg-[#1D4ED8] px-4 md:px-5 py-2 md:py-2.5 text-sm font-semibold text-white hover:bg-[#3B82F6]"
               >
                 Siguiente
               </button>
@@ -322,7 +322,7 @@ export default function ConsultoriaPage() {
             {step === 3 && (
               <button
                 type="submit"
-                className="inline-flex items-center justify-center rounded-full bg-[#1D4ED8] px-5 py-2.5 text-sm font-semibold text-white hover:bg-[#3B82F6] transition"
+                className="btn-anim font-montserrat inline-flex items-center justify-center rounded-full bg-[#1D4ED8] px-4 md:px-5 py-2 md:py-2.5 text-sm font-semibold text-white hover:bg-[#3B82F6]"
               >
                 Enviar solicitud
               </button>

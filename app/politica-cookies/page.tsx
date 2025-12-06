@@ -221,7 +221,7 @@ export default function PoliticaCookies() {
                 <div className="bg-[#020617]/90 border border-white/5 border-[#1D4ED8]/20 rounded-lg p-6 mt-4">
                   <p className="text-gray-300 font-montserrat">
                     📧 Email:{" "}
-                    <a href="mailto:soporte@wesolai.com" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors">
+                    <a href="mailto:soporte@wesolai.com" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8]">
                       soporte@wesolai.com
                     </a>
                   </p>

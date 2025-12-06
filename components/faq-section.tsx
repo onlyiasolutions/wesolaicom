@@ -74,7 +74,7 @@ export function FAQSection() {
               <AccordionItem
                 key={index}
                 value={`item-${index}`}
-                className="bg-[#020617]/90 border border-white/5 border-[#1D4ED8]/20 hover:border-[#1D4ED8]/40 rounded-lg px-6 ring-1 ring-[#1D4ED8]/30 transition-all duration-300"
+                className="bg-[#020617]/90 border border-white/5 border-[#1D4ED8]/20 hover:border-[#1D4ED8]/50 rounded-lg px-6 ring-1 ring-[#1D4ED8]/30 hover:ring-[#1D4ED8]/50 transition-all duration-300 hover:shadow-[0_18px_60px_rgba(0,0,0,0.75)] hover:shadow-[0_0_50px_rgba(59,130,246,0.4)] hover:scale-[1.01]"
               >
                 <AccordionTrigger className="text-left font-alias text-white hover:text-gray-300 transition-colors">
                   {faq.question}

@@ -54,13 +54,13 @@ export function Navbar() {
               <>
                 <a
                   href="#solvers"
-                  className="text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
+                  className="link-anim text-gray-300 hover:text-[#3B82F6] font-montserrat"
                 >
                   Solvers
                 </a>
                 <a
                   href="#faq"
-                  className="text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
+                  className="link-anim text-gray-300 hover:text-[#3B82F6] font-montserrat"
                 >
                   FAQ
                 </a>
@@ -68,14 +68,14 @@ export function Navbar() {
             ) : (
               <a
                 href="/"
-                className="text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
+                className="link-anim text-gray-300 hover:text-[#3B82F6] font-montserrat"
               >
                 Inicio
               </a>
             )}
             <Link href="/consultoria">
               <Button
-                className="bg-[#1D4ED8] hover:bg-[#3B82F6] text-white"
+                className="btn-anim font-montserrat bg-[#1D4ED8] hover:bg-[#3B82F6] text-white text-sm md:text-base px-4 md:px-6 py-2 md:py-3"
               >
                 Agendar Consultoría
               </Button>
@@ -84,28 +84,60 @@ export function Navbar() {
 
           {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-white"
+            className="md:hidden text-white transition-transform duration-300 hover:scale-110 active:scale-95"
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle menu"
           >
-            {isMobileMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
+            <div className="relative w-6 h-6">
+              <Menu 
+                className={`h-6 w-6 absolute inset-0 transition-all duration-300 ${
+                  isMobileMenuOpen ? "opacity-0 rotate-90 scale-0" : "opacity-100 rotate-0 scale-100"
+                }`}
+              />
+              <X 
+                className={`h-6 w-6 absolute inset-0 transition-all duration-300 ${
+                  isMobileMenuOpen ? "opacity-100 rotate-0 scale-100" : "opacity-0 -rotate-90 scale-0"
+                }`}
+              />
+            </div>
           </button>
         </div>
 
         {/* Mobile Menu */}
-        {isMobileMenuOpen && (
-          <div className="md:hidden pb-4 space-y-4">
+        <div
+          className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
+            isMobileMenuOpen
+              ? "max-h-96 opacity-100 pb-4"
+              : "max-h-0 opacity-0 pb-0"
+          }`}
+        >
+          <div className="space-y-4 pt-2 bg-[#020617]/98 backdrop-blur-md border-t border-[#1D4ED8]/20 -mx-4 px-4 mt-2 rounded-b-lg">
             {pathname === "/" ? (
               <>
                 <a
                   href="#solvers"
-                  className="block text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
+                  className={`link-anim block text-gray-300 hover:text-[#3B82F6] font-montserrat transition-all duration-300 ${
+                    isMobileMenuOpen
+                      ? "translate-x-0 opacity-100"
+                      : "-translate-x-4 opacity-0"
+                  }`}
+                  style={{
+                    transitionDelay: isMobileMenuOpen ? "0.1s" : "0s"
+                  }}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   Solvers
                 </a>
                 <a
                   href="#faq"
-                  className="block text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
+                  className={`link-anim block text-gray-300 hover:text-[#3B82F6] font-montserrat transition-all duration-300 ${
+                    isMobileMenuOpen
+                      ? "translate-x-0 opacity-100"
+                      : "-translate-x-4 opacity-0"
+                  }`}
+                  style={{
+                    transitionDelay: isMobileMenuOpen ? "0.15s" : "0s"
+                  }}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
                   FAQ
@@ -114,22 +146,39 @@ export function Navbar() {
             ) : (
               <a
                 href="/"
-                className="block text-gray-300 hover:text-[#3B82F6] transition-colors font-montserrat"
+                className={`link-anim block text-gray-300 hover:text-[#3B82F6] font-montserrat transition-all duration-300 ${
+                  isMobileMenuOpen
+                    ? "translate-x-0 opacity-100"
+                    : "-translate-x-4 opacity-0"
+                }`}
+                style={{
+                  transitionDelay: isMobileMenuOpen ? "0.1s" : "0s"
+                }}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
                 Inicio
               </a>
             )}
-            <Link href="/consultoria" className="w-full">
+            <Link
+              href="/consultoria"
+              className={`w-full block transition-all duration-300 ${
+                isMobileMenuOpen
+                  ? "translate-x-0 opacity-100"
+                  : "-translate-x-4 opacity-0"
+              }`}
+              style={{
+                transitionDelay: isMobileMenuOpen ? "0.2s" : "0s"
+              }}
+            >
               <Button
                 onClick={() => setIsMobileMenuOpen(false)}
-                className="w-full bg-[#1D4ED8] hover:bg-[#3B82F6] text-white"
+                className="btn-anim font-montserrat w-full bg-[#1D4ED8] hover:bg-[#3B82F6] text-white text-sm md:text-base px-4 md:px-6 py-2 md:py-3"
               >
                 Agendar Consultoría
               </Button>
             </Link>
           </div>
-        )}
+        </div>
       </div>
     </nav>
   )

@@ -55,13 +55,13 @@ export default function AvisoLegal() {
                   </p>
                   <p className="text-gray-300 mb-2">
                     <strong className="text-white">Email de contacto:</strong>{" "}
-                    <a href="mailto:soporte@wesolai.com" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors">
+                    <a href="mailto:soporte@wesolai.com" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8]">
                       soporte@wesolai.com
                     </a>
                   </p>
                   <p className="text-gray-300">
                     <strong className="text-white">Sitio web:</strong>{" "}
-                    <a href="https://wesolai.com" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors">
+                    <a href="https://wesolai.com" target="_blank" rel="noopener noreferrer" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8]">
                       https://wesolai.com
                     </a>
                     {" "}(y dominios asociados de SolAI)
@@ -232,7 +232,7 @@ export default function AvisoLegal() {
                 </ul>
                 <p className="text-gray-300 mt-4">
                   Puedes consultar la Política de Privacidad en el siguiente enlace de la web:{" "}
-                  <Link href="/politica-privacidad" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors">
+                  <Link href="/politica-privacidad" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8]">
                     Política de Privacidad
                   </Link>
                   .
@@ -258,7 +258,7 @@ export default function AvisoLegal() {
                 </ul>
                 <p className="text-gray-300 mt-4">
                   Puedes consultar la Política de Cookies en el enlace correspondiente del sitio web:{" "}
-                  <Link href="/politica-cookies" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors">
+                  <Link href="/politica-cookies" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8]">
                     Política de Cookies
                   </Link>
                   .
@@ -320,7 +320,7 @@ export default function AvisoLegal() {
                   </p>
                   <p className="text-gray-300 font-montserrat mb-2">
                     📞 Teléfono:{" "}
-                    <a href="tel:+34919933075" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors">
+                    <a href="tel:+34919933075" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8]">
                       +34 919 93 30 75
                     </a>
                   </p>

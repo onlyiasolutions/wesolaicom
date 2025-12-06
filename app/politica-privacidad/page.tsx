@@ -64,7 +64,7 @@ export default function PoliticaPrivacidad() {
                   </p>
                   <p className="text-gray-300">
                     <strong className="text-white">Email de contacto:</strong>{" "}
-                    <a href="mailto:soporte@wesolai.com" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors">
+                    <a href="mailto:soporte@wesolai.com" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8]">
                       soporte@wesolai.com
                     </a>
                   </p>
@@ -269,12 +269,12 @@ export default function PoliticaPrivacidad() {
                       <li><strong className="text-white">Marco de transferencias:</strong> DPF (EU-US Data Privacy Framework).</li>
                       <li><strong className="text-white">Documentación:</strong></li>
                       <li className="ml-4">
-                        <a href="https://www.dataprivacyframework.gov/participant/5780" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors break-all">
+                        <a href="https://www.dataprivacyframework.gov/participant/5780" target="_blank" rel="noopener noreferrer" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8] break-all">
                           https://www.dataprivacyframework.gov/participant/5780
                         </a>
                       </li>
                       <li className="ml-4">
-                        <a href="https://policies.google.com/privacy/frameworks?hl=es" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors break-all">
+                        <a href="https://policies.google.com/privacy/frameworks?hl=es" target="_blank" rel="noopener noreferrer" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8] break-all">
                           https://policies.google.com/privacy/frameworks?hl=es
                         </a>
                       </li>
@@ -288,12 +288,12 @@ export default function PoliticaPrivacidad() {
                       <li><strong className="text-white">Marco de transferencias:</strong> DPF.</li>
                       <li><strong className="text-white">Documentación:</strong></li>
                       <li className="ml-4">
-                        <a href="https://www.dataprivacyframework.gov/participant/6436" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors break-all">
+                        <a href="https://www.dataprivacyframework.gov/participant/6436" target="_blank" rel="noopener noreferrer" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8] break-all">
                           https://www.dataprivacyframework.gov/participant/6436
                         </a>
                       </li>
                       <li className="ml-4">
-                        <a href="https://stripe.com/es/legal/data-privacy-framework" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors break-all">
+                        <a href="https://stripe.com/es/legal/data-privacy-framework" target="_blank" rel="noopener noreferrer" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8] break-all">
                           https://stripe.com/es/legal/data-privacy-framework
                         </a>
                       </li>
@@ -307,12 +307,12 @@ export default function PoliticaPrivacidad() {
                       <li><strong className="text-white">Marco de transferencias:</strong> DPF y DPA (Data Protection Addendum).</li>
                       <li><strong className="text-white">Documentación:</strong></li>
                       <li className="ml-4">
-                        <a href="https://www.twilio.com/en-us/legal/privacy" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors break-all">
+                        <a href="https://www.twilio.com/en-us/legal/privacy" target="_blank" rel="noopener noreferrer" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8] break-all">
                           https://www.twilio.com/en-us/legal/privacy
                         </a>
                       </li>
                       <li className="ml-4">
-                        <a href="https://www.twilio.com/en-us/legal/data-protection-addendum" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors break-all">
+                        <a href="https://www.twilio.com/en-us/legal/data-protection-addendum" target="_blank" rel="noopener noreferrer" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8] break-all">
                           https://www.twilio.com/en-us/legal/data-protection-addendum
                         </a>
                       </li>
@@ -326,7 +326,7 @@ export default function PoliticaPrivacidad() {
                       <li><strong className="text-white">Marco de transferencias:</strong> DPA con SCCs (Standard Contractual Clauses) cuando hay transferencias fuera del EEE.</li>
                       <li><strong className="text-white">Documentación:</strong></li>
                       <li className="ml-4">
-                        <a href="https://www.framer.com/legal/data-processing-addendum/" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors break-all">
+                        <a href="https://www.framer.com/legal/data-processing-addendum/" target="_blank" rel="noopener noreferrer" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8] break-all">
                           https://www.framer.com/legal/data-processing-addendum/
                         </a>
                       </li>
@@ -340,12 +340,12 @@ export default function PoliticaPrivacidad() {
                       <li><strong className="text-white">Marco de transferencias:</strong> DPF.</li>
                       <li><strong className="text-white">Documentación:</strong></li>
                       <li className="ml-4">
-                        <a href="https://vercel.com/changelog/vercel-is-now-certified-under-the-eu-us-data-privacy-framework-dpf" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors break-all">
+                        <a href="https://vercel.com/changelog/vercel-is-now-certified-under-the-eu-us-data-privacy-framework-dpf" target="_blank" rel="noopener noreferrer" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8] break-all">
                           https://vercel.com/changelog/vercel-is-now-certified-under-the-eu-us-data-privacy-framework-dpf
                         </a>
                       </li>
                       <li className="ml-4">
-                        <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors break-all">
+                        <a href="https://vercel.com/legal/privacy-policy" target="_blank" rel="noopener noreferrer" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8] break-all">
                           https://vercel.com/legal/privacy-policy
                         </a>
                       </li>
@@ -359,12 +359,12 @@ export default function PoliticaPrivacidad() {
                       <li><strong className="text-white">Marco de transferencias:</strong> SCCs (cláusulas contractuales tipo) según su DPA.</li>
                       <li><strong className="text-white">Documentación:</strong></li>
                       <li className="ml-4">
-                        <a href="https://www.namecheap.com/legal/universal/data-processing-addendum/" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors break-all">
+                        <a href="https://www.namecheap.com/legal/universal/data-processing-addendum/" target="_blank" rel="noopener noreferrer" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8] break-all">
                           https://www.namecheap.com/legal/universal/data-processing-addendum/
                         </a>
                       </li>
                       <li className="ml-4">
-                        <a href="https://www.namecheap.com/legal/general/privacy-policy/" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors break-all">
+                        <a href="https://www.namecheap.com/legal/general/privacy-policy/" target="_blank" rel="noopener noreferrer" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8] break-all">
                           https://www.namecheap.com/legal/general/privacy-policy/
                         </a>
                       </li>
@@ -415,7 +415,7 @@ export default function PoliticaPrivacidad() {
                 </p>
                 <p className="text-gray-300">
                   Puedes obtener información más detallada en nuestra{" "}
-                  <a href="/cookies" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors">
+                  <a href="/politica-cookies" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8]">
                     Política de Cookies
                   </a>
                   {" "}y configurar tus preferencias en cualquier momento.
@@ -472,7 +472,7 @@ export default function PoliticaPrivacidad() {
                   También tienes derecho a presentar una reclamación ante la Agencia Española de Protección de Datos (AEPD) si consideras que el tratamiento de tus datos infringe la normativa:
                 </p>
                 <p className="text-gray-300">
-                  <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors">
+                  <a href="https://www.aepd.es" target="_blank" rel="noopener noreferrer" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8]">
                     https://www.aepd.es
                   </a>
                 </p>
@@ -555,13 +555,13 @@ export default function PoliticaPrivacidad() {
                   </p>
                   <p className="text-gray-300 font-montserrat mb-2">
                     📧 Email:{" "}
-                    <a href="mailto:soporte@wesolai.com" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors">
+                    <a href="mailto:soporte@wesolai.com" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8]">
                       soporte@wesolai.com
                     </a>
                   </p>
                   <p className="text-gray-300 font-montserrat mb-2">
                     📞 Teléfono:{" "}
-                    <a href="tel:+34919933075" className="text-[#3B82F6] hover:text-[#1D4ED8] transition-colors">
+                    <a href="tel:+34919933075" className="link-anim text-[#3B82F6] hover:text-[#1D4ED8]">
                       +34 919 93 30 75
                     </a>
                   </p>

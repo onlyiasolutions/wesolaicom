@@ -30,17 +30,17 @@ export function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link href="#solvers" className="text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm transition-colors">
+                <Link href="#solvers" className="link-anim text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm">
                   Solvers
                 </Link>
               </li>
               <li>
-                <Link href="#agenda" className="text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm transition-colors">
+                <Link href="#agenda" className="link-anim text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm">
                   Agendar Consultoría
                 </Link>
               </li>
               <li>
-                <Link href="#faq" className="text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm transition-colors">
+                <Link href="#faq" className="link-anim text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm">
                   FAQ
                 </Link>
               </li>
@@ -56,17 +56,17 @@ export function Footer() {
             </h4>
             <ul className="space-y-2">
               <li>
-                <Link href="/aviso-legal" className="text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm transition-colors">
+                <Link href="/aviso-legal" className="link-anim text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm">
                   Aviso Legal y Términos de Servicio
                 </Link>
               </li>
               <li>
-                <Link href="/politica-privacidad" className="text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm transition-colors">
+                <Link href="/politica-privacidad" className="link-anim text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm">
                   Política de Privacidad
                 </Link>
               </li>
               <li>
-                <Link href="/politica-cookies" className="text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm transition-colors">
+                <Link href="/politica-cookies" className="link-anim text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm">
                   Política de Cookies
                 </Link>
               </li>
@@ -74,7 +74,7 @@ export function Footer() {
                 <a
                   href="#"
                   data-cky-toggle="preferences"
-                  className="text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm transition-colors"
+                  className="link-anim text-gray-400 hover:text-[#3B82F6] font-montserrat text-sm"
                 >
                   Configuración de Cookies
                 </a>
@@ -92,11 +92,11 @@ export function Footer() {
             <ul className="space-y-3 text-gray-400 font-montserrat text-sm">
               <li className="flex items-center gap-2">
                 <Mail className="h-5 w-5 text-gray-400" />
-                <a href="mailto:hola@wesolai.com" className="hover:text-[#3B82F6] transition-colors">hola@wesolai.com</a>
+                <a href="mailto:hola@wesolai.com" className="link-anim hover:text-[#3B82F6]">hola@wesolai.com</a>
               </li>
               <li className="flex items-center gap-2">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor" viewBox="0 0 24 24" className="h-5 w-5 text-gray-400"><path d="M6.62 10.79a15.053 15.053 0 006.59 6.59l2.2-2.2a1 1 0 011.01-.24c1.12.37 2.33.57 3.58.57a1 1 0 011 1V21a1 1 0 01-1 1C10.07 22 2 13.93 2 3a1 1 0 011-1h3.5a1 1 0 011 1c0 1.25.2 2.46.57 3.58a1 1 0 01-.24 1.01l-2.21 2.2z"/></svg>
-                <a href="tel:+34919933075" className="hover:text-[#3B82F6] transition-colors">+34 919 93 30 75</a>
+                <a href="tel:+34919933075" className="link-anim hover:text-[#3B82F6]">+34 919 93 30 75</a>
               </li>
             </ul>
           </div>
@@ -109,18 +109,18 @@ export function Footer() {
               Síguenos
             </h4>
             <div className="flex gap-4">
-              <Link href="https://www.linkedin.com/company/wesolailabs/" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
+              <Link href="https://www.linkedin.com/company/wesolailabs/" className="link-anim text-gray-400 hover:text-[#3B82F6]">
                 <Linkedin className="h-5 w-5" />
               </Link>
-              <Link href="https://instagram.com/wesolailabs" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
+              <Link href="https://instagram.com/wesolailabs" className="link-anim text-gray-400 hover:text-[#3B82F6]">
                 <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5" viewBox="0 0 24 24" fill="currentColor">
                   <path d="M7 2C4.243 2 2 4.243 2 7v10c0 2.757 2.243 5 5 5h10c2.757 0 5-2.243 5-5V7c0-2.757-2.243-5-5-5H7zm10 2c1.654 0 3 1.346 3 3v10c0 1.654-1.346 3-3 3H7c-1.654 0-3-1.346-3-3V7c0-1.654 1.346-3 3-3h10zm-5 3c-2.757 0-5 2.243-5 5s2.243 5 5 5 5-2.243 5-5-2.243-5-5-5zm0 2c1.654 0 3 1.346 3 3s-1.346 3-3 3-3-1.346-3-3 1.346-3 3-3zm4.5-.75a1.25 1.25 0 110 2.5 1.25 1.25 0 010-2.5z" />
                 </svg>
               </Link>
-              <Link href="https://www.facebook.com/wesolai" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
+              <Link href="https://www.facebook.com/wesolai" className="link-anim text-gray-400 hover:text-[#3B82F6]">
                 <Facebook className="h-5 w-5" />
               </Link>
-              <Link href="mailto:hola@wesolai.com" className="text-gray-400 hover:text-[#3B82F6] transition-colors">
+              <Link href="mailto:hola@wesolai.com" className="link-anim text-gray-400 hover:text-[#3B82F6]">
                 <Mail className="h-5 w-5" />
               </Link>
             </div>

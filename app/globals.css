@@ -74,3 +74,70 @@
   animation: fadeInPage 0.45s ease-out;
 }
 
+/* Smooth scroll */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Respect prefers-reduced-motion */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+
+/* Efecto base para elementos interactivos */
+.interactive {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+/* Botones con efecto "soft-press" */
+.btn-anim {
+  transition:
+    background-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease,
+    box-shadow 0.25s ease;
+}
+
+.btn-anim:hover {
+  transform: translateY(-1px) scale(1.02);
+  box-shadow: 0 10px 25px rgba(15, 23, 42, 0.55);
+}
+
+.btn-anim:active {
+  transform: translateY(0) scale(0.97);
+  box-shadow: 0 4px 12px rgba(15, 23, 42, 0.45);
+}
+
+/* Tarjetas con efecto suave */
+.card-anim {
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+.card-anim:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(15, 23, 42, 0.75);
+}
+
+.card-anim:active {
+  transform: translateY(-1px) scale(0.99);
+}
+
+/* Links con transición de color */
+.link-anim {
+  transition: color 0.2s ease, opacity 0.2s ease, text-shadow 0.25s ease;
+}
+

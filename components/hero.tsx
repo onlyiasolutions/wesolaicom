@@ -61,7 +61,7 @@ export function Hero() {
           <Link href="/consultoria">
             <Button
               size="lg"
-              className="bg-[#1D4ED8] hover:bg-[#3B82F6] text-white text-lg px-8 py-6 rounded-lg shadow-lg shadow-[#1D4ED8]/50 hover:shadow-xl hover:shadow-[#3B82F6]/50 transition-all duration-300 hover:scale-105"
+              className="btn-anim font-montserrat bg-[#1D4ED8] hover:bg-[#3B82F6] text-white text-sm md:text-lg px-6 md:px-8 py-4 md:py-6 rounded-lg shadow-lg shadow-[#1D4ED8]/50"
             >
               Agendar Consultoría
               <ArrowRight className="ml-2 h-5 w-5" />
@@ -75,7 +75,7 @@ export function Hero() {
             }}
             variant="outline"
             size="lg"
-            className="border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white text-lg px-8 py-6 rounded-lg transition-all duration-300 font-montserrat font-medium"
+            className="btn-anim font-montserrat border-2 border-[#3B82F6] text-[#3B82F6] hover:bg-[#3B82F6] hover:text-white text-sm md:text-lg px-6 md:px-8 py-4 md:py-6 rounded-lg font-medium"
           >
             Ver Solvers y Casos
           </Button>

@@ -67,7 +67,7 @@ export function ProcessSection() {
                 className="text-center"
               >
                 <div className="mb-6 flex justify-center">
-                  <div className="w-20 h-20 rounded-full bg-[#1D4ED8] hover:bg-[#3B82F6] flex items-center justify-center shadow-lg shadow-[#1D4ED8]/50 shadow-[0_0_30px_rgba(59,130,246,0.4)] transition-all duration-300">
+                  <div className="w-20 h-20 rounded-full bg-[#1D4ED8] hover:bg-[#3B82F6] flex items-center justify-center shadow-lg shadow-[#1D4ED8]/50 shadow-[0_0_30px_rgba(59,130,246,0.4)] hover:shadow-[0_0_40px_rgba(59,130,246,0.6)] transition-all duration-300 hover:scale-110">
                     <Icon className="h-10 w-10 text-white" />
                   </div>
                 </div>

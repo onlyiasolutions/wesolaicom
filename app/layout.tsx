@@ -1,6 +1,6 @@
+/* eslint-disable @next/next/no-sync-scripts */
 import type { ReactNode } from "react"
 import type { Metadata } from "next"
-import Script from "next/script"
 import { Montserrat } from "next/font/google"
 import localFont from "next/font/local"
 import "./globals.css"
@@ -57,15 +57,17 @@ export default function RootLayout({
     <html lang="es" className="scroll-smooth" suppressHydrationWarning>
       <head>
         <link rel="icon" href="/favicon.png" sizes="any" />
+        {/* Start cookieyes banner */}
+        <script
+          id="cookieyes"
+          type="text/javascript"
+          src="https://cdn-cookieyes.com/client_data/d7babbe896b50556c063d4e845e7f39a/script.js"
+        ></script>
+        {/* End cookieyes banner */}
       </head>
       <body
         className={`${montserrat.variable} ${alias.variable} ${playfair.variable} font-montserrat antialiased bg-slate-950 text-slate-50 selection:bg-blue-500/30 selection:text-slate-50`}
       >
-        <Script
-          id="cookieyes"
-          src="https://cdn-cookieyes.com/client_data/d7babbe896b50556c063d4e845e7f39a/script.js"
-          strategy="afterInteractive"
-        />
         <div className="relative min-h-screen overflow-hidden">
           <ParallaxBackground />
           <MouseLightEffect />

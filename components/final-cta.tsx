@@ -39,7 +39,7 @@ export function FinalCTA() {
           <Button
             onClick={handleCTAClick}
             size="lg"
-            className="bg-[#1D4ED8] hover:bg-[#3B82F6] text-white text-xl px-12 py-8 rounded-lg shadow-2xl shadow-[#1D4ED8]/50 hover:shadow-[#3B82F6]/50 hover:shadow-[0_0_45px_rgba(59,130,246,0.35)] transition-all duration-300 hover:scale-105 font-alias font-bold"
+            className="btn-anim font-montserrat bg-[#1D4ED8] hover:bg-[#3B82F6] text-white text-lg md:text-xl px-8 md:px-12 py-6 md:py-8 rounded-lg shadow-2xl shadow-[#1D4ED8]/50 hover:shadow-[#3B82F6]/50 hover:shadow-[0_0_45px_rgba(59,130,246,0.35)] font-bold"
           >
             <span>
               Agendar Consultoría
