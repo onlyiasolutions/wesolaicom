@@ -90,11 +90,13 @@ export default function ConsultoriaPage() {
     <main className="min-h-screen bg-[#020617] text-white flex items-center justify-center px-4 py-12 relative z-20 page-fade">
       <div className="max-w-xl w-full rounded-2xl border border-[#1D4ED8]/30 bg-[#0F172A]/90 p-8 shadow-xl">
         <div className="w-full flex justify-center mb-6">
-          <img
-            src="/logos/logo_white.png"
-            alt="SolAI Logo"
-            className="h-10 w-auto object-contain"
-          />
+          <a href="/" className="inline-block">
+            <img
+              src="/logos/logo_white.png"
+              alt="SolAI Logo"
+              className="h-10 w-auto object-contain transition-opacity hover:opacity-80"
+            />
+          </a>
         </div>
         {/* Stepper header */}
         <div className="flex items-center justify-between mb-8">
