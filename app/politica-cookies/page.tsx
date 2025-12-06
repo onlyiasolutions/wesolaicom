@@ -163,7 +163,7 @@ export default function PoliticaCookies() {
                   <li>Configurar preferencias para personalizar el uso de cookies.</li>
                 </ul>
                 <p className="text-gray-300 mt-4">
-                  Puedes cambiar tu configuración en cualquier momento desde el pie de página ("Configuración de cookies") o ajustando las preferencias de tu navegador.
+                  Puedes cambiar tu configuración en cualquier momento desde el pie de página (&quot;Configuración de cookies&quot;) o ajustando las preferencias de tu navegador.
                 </p>
               </section>
 

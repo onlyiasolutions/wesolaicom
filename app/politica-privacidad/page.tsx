@@ -37,7 +37,7 @@ export default function PoliticaPrivacidad() {
                   <strong className="text-white">Actualizado el:</strong> 24 de agosto de 2025
                 </p>
                 <p className="text-gray-300">
-                  En SolAI Labs LLC ("SolAI", "nosotros", "nuestra empresa") nos comprometemos a proteger y respetar tu privacidad.
+                  En SolAI Labs LLC (&quot;SolAI&quot;, &quot;nosotros&quot;, &quot;nuestra empresa&quot;) nos comprometemos a proteger y respetar tu privacidad.
                 </p>
                 <p className="text-gray-300 mt-2">
                   Esta Política de Privacidad describe cómo recopilamos, usamos y compartimos tu información personal cuando utilizas nuestro sitio web y nuestros servicios relacionados.
