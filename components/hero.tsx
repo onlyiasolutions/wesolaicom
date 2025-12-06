@@ -28,7 +28,7 @@ export function Hero() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.6 }}
-          className="text-5xl md:text-7xl font-alias font-bold mb-6"
+          className="font-alias font-bold mb-6 text-4xl sm:text-5xl md:text-6xl leading-tight sm:leading-tight md:leading-[1.05] tracking-tight max-w-3xl mx-auto px-2"
           style={{
             color: "#ffffff",
             background: "linear-gradient(to right, #ffffff, #3B82F6)",
@@ -40,7 +40,7 @@ export function Hero() {
         >
           Automatiza procesos.
           <br />
-          Potencia equipos. <span className="font-playfair font-normal italic tracking-[-0.02em] -ml-[4px]">Con IA.</span>
+          Potencia equipos. <span className="font-playfair font-normal italic tracking-[-0.02em]">Con IA.</span>
         </motion.h1>
         
         <motion.p

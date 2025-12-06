@@ -7,7 +7,7 @@ import { ProcessSection } from "@/components/process-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { FAQSection } from "@/components/faq-section"
 import { FinalCTA } from "@/components/final-cta"
-import { Footer } from "@/components/footer"
+import Footer from "@/components/footer"
 
 export default function Home() {
   return (
@@ -25,4 +25,3 @@ export default function Home() {
     </main>
   )
 }
-

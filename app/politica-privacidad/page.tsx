@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
+import Footer from "@/components/footer"
 
 export default function PoliticaPrivacidad() {
   return (

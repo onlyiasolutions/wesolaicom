@@ -2,7 +2,7 @@
 
 import { motion } from "framer-motion"
 import { Navbar } from "@/components/navbar"
-import { Footer } from "@/components/footer"
+import Footer from "@/components/footer"
 import Link from "next/link"
 
 export default function AvisoLegal() {
@@ -337,4 +337,3 @@ export default function AvisoLegal() {
     </main>
   )
 }
-
