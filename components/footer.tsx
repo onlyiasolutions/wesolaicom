@@ -64,6 +64,7 @@ export default function Footer() {
                 <a
                   href="#"
                   className="cky-banner-element hover:text-white transition link-anim cursor-pointer"
+                  onClick={(e) => e.preventDefault()}
                 >
                   Configuración de cookies
                 </a>
