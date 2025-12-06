@@ -28,6 +28,7 @@ export default function ConsultoriaPage() {
   const [step, setStep] = useState<number>(1)
   const [formData, setFormData] = useState<FormData>(initialData)
   const [submitted, setSubmitted] = useState<boolean>(false)
+  const [isTransitioning, setIsTransitioning] = useState<boolean>(false)
 
   const formRef = useRef<HTMLFormElement | null>(null)
 
@@ -42,11 +43,21 @@ export default function ConsultoriaPage() {
     if (formRef.current && !formRef.current.reportValidity()) {
       return
     }
-    setStep((prev) => Math.min(prev + 1, 3))
+    const nextStep = Math.min(step + 1, 3)
+    setIsTransitioning(true)
+    setTimeout(() => {
+      setStep(nextStep)
+      setIsTransitioning(false)
+    }, 220)
   }
 
   const handleBack = () => {
-    setStep((prev) => Math.max(prev - 1, 1))
+    const prevStep = Math.max(step - 1, 1)
+    setIsTransitioning(true)
+    setTimeout(() => {
+      setStep(prevStep)
+      setIsTransitioning(false)
+    }, 220)
   }
 
   const handleSubmit = async (e: FormEvent) => {
@@ -121,174 +132,183 @@ export default function ConsultoriaPage() {
         </div>
 
         <form ref={formRef} onSubmit={handleSubmit} className="space-y-6">
-          {step === 1 && (
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm mb-1 text-gray-300" htmlFor="nombre">
-                  Nombre
-                </label>
-                <input
-                  id="nombre"
-                  name="nombre"
-                  type="text"
-                  required
-                  value={formData.nombre}
-                  onChange={handleChange}
-                  className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
-                  placeholder="Tu nombre"
-                />
+          <div
+            className={`min-h-[260px] transition-all duration-300 ease-out transform ${
+              isTransitioning ? "opacity-0 translate-y-2" : "opacity-100 translate-y-0"
+            }`}
+          >
+            {step === 1 && (
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm mb-1 text-gray-300" htmlFor="nombre">
+                    Nombre
+                  </label>
+                  <input
+                    id="nombre"
+                    name="nombre"
+                    type="text"
+                    required
+                    value={formData.nombre}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
+                    placeholder="Tu nombre"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm mb-1 text-gray-300" htmlFor="apellidos">
+                    Apellidos
+                  </label>
+                  <input
+                    id="apellidos"
+                    name="apellidos"
+                    type="text"
+                    required
+                    value={formData.apellidos}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
+                    placeholder="Tus apellidos"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm mb-1 text-gray-300" htmlFor="email">
+                    Email
+                  </label>
+                  <input
+                    id="email"
+                    name="email"
+                    type="email"
+                    required
+                    value={formData.email}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
+                    placeholder="tu@empresa.com"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm mb-1 text-gray-300" htmlFor="telefono">
+                    Teléfono
+                  </label>
+                  <input
+                    id="telefono"
+                    name="telefono"
+                    type="tel"
+                    required
+                    value={formData.telefono}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
+                    placeholder="+34 ..."
+                  />
+                </div>
               </div>
-              <div>
-                <label className="block text-sm mb-1 text-gray-300" htmlFor="apellidos">
-                  Apellidos
-                </label>
-                <input
-                  id="apellidos"
-                  name="apellidos"
-                  type="text"
-                  required
-                  value={formData.apellidos}
-                  onChange={handleChange}
-                  className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
-                  placeholder="Tus apellidos"
-                />
-              </div>
-              <div>
-                <label className="block text-sm mb-1 text-gray-300" htmlFor="email">
-                  Email
-                </label>
-                <input
-                  id="email"
-                  name="email"
-                  type="email"
-                  required
-                  value={formData.email}
-                  onChange={handleChange}
-                  className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
-                  placeholder="tu@empresa.com"
-                />
-              </div>
-              <div>
-                <label className="block text-sm mb-1 text-gray-300" htmlFor="telefono">
-                  Teléfono
-                </label>
-                <input
-                  id="telefono"
-                  name="telefono"
-                  type="tel"
-                  required
-                  value={formData.telefono}
-                  onChange={handleChange}
-                  className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
-                  placeholder="+34 ..."
-                />
-              </div>
-            </div>
-          )}
+            )}
 
-          {step === 2 && (
-            <div className="space-y-4">
-              <div>
-                <label className="block text-sm mb-1 text-gray-300" htmlFor="empresa">
-                  Nombre de la empresa
-                </label>
-                <input
-                  id="empresa"
-                  name="empresa"
-                  type="text"
-                  required
-                  value={formData.empresa}
-                  onChange={handleChange}
-                  className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
-                  placeholder="SolAI, Dentalia, etc."
-                />
+            {step === 2 && (
+              <div className="space-y-4">
+                <div>
+                  <label className="block text-sm mb-1 text-gray-300" htmlFor="empresa">
+                    Nombre de la empresa
+                  </label>
+                  <input
+                    id="empresa"
+                    name="empresa"
+                    type="text"
+                    required
+                    value={formData.empresa}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
+                    placeholder="SolAI, Dentalia, etc."
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm mb-1 text-gray-300" htmlFor="web">
+                    Web Empresa
+                  </label>
+                  <input
+                    id="web"
+                    name="web"
+                    type="text"
+                    required
+                    inputMode="url"
+                    pattern="^([a-zA-Z0-9-]+\.)+[a-zA-Z]{2,}$"
+                    title="Escribe solo el dominio, por ejemplo: tuempresa.com o midominio.es"
+                    value={formData.web}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
+                    placeholder="tuempresa.com"
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm mb-1 text-gray-300" htmlFor="cargo">
+                    Cargo
+                  </label>
+                  <input
+                    id="cargo"
+                    name="cargo"
+                    type="text"
+                    required
+                    value={formData.cargo}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
+                    placeholder="CEO, Founder, Director de operaciones..."
+                  />
+                </div>
+                <div>
+                  <label className="block text-sm mb-1 text-gray-300" htmlFor="sector">
+                    Sector
+                  </label>
+                  <input
+                    id="sector"
+                    name="sector"
+                    type="text"
+                    required
+                    value={formData.sector}
+                    onChange={handleChange}
+                    className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
+                    placeholder="Clínicas, gimnasios, formación, etc."
+                  />
+                </div>
               </div>
-              <div>
-                <label className="block text-sm mb-1 text-gray-300" htmlFor="web">
-                  Web Empresa
-                </label>
-                <input
-                  id="web"
-                  name="web"
-                  type="url"
-                  required
-                  value={formData.web}
-                  onChange={handleChange}
-                  className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
-                  placeholder="https://tuempresa.com"
-                />
-              </div>
-              <div>
-                <label className="block text-sm mb-1 text-gray-300" htmlFor="cargo">
-                  Cargo
-                </label>
-                <input
-                  id="cargo"
-                  name="cargo"
-                  type="text"
-                  required
-                  value={formData.cargo}
-                  onChange={handleChange}
-                  className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
-                  placeholder="CEO, Founder, Director de operaciones..."
-                />
-              </div>
-              <div>
-                <label className="block text-sm mb-1 text-gray-300" htmlFor="sector">
-                  Sector
-                </label>
-                <input
-                  id="sector"
-                  name="sector"
-                  type="text"
-                  required
-                  value={formData.sector}
-                  onChange={handleChange}
-                  className="w-full rounded-xl border border-[#1D4ED8]/30 bg-[#020617] px-3 py-2 text-sm text-white placeholder:text-gray-500 outline-none focus:border-[#3B82F6]"
-                  placeholder="Clínicas, gimnasios, formación, etc."
-                />
-              </div>
-            </div>
-          )}
+            )}
 
-          {step === 3 && (
-            <div className="space-y-4">
-              <p className="text-sm text-gray-300">
-                Revisa que tus datos sean correctos antes de enviar tu solicitud de
-                consultoría.
-              </p>
-              <div className="space-y-2 text-sm">
-                <p className="text-white">
-                  <span className="font-medium text-gray-300">Nombre: </span>
-                  {formData.nombre} {formData.apellidos}
+            {step === 3 && (
+              <div className="space-y-4">
+                <p className="text-sm text-gray-300">
+                  Revisa que tus datos sean correctos antes de enviar tu solicitud de
+                  consultoría.
                 </p>
-                <p className="text-white">
-                  <span className="font-medium text-gray-300">Email: </span>
-                  {formData.email}
-                </p>
-                <p className="text-white">
-                  <span className="font-medium text-gray-300">Teléfono: </span>
-                  {formData.telefono}
-                </p>
-                <p className="text-white">
-                  <span className="font-medium text-gray-300">Empresa: </span>
-                  {formData.empresa}
-                </p>
-                <p className="text-white">
-                  <span className="font-medium text-gray-300">Web Empresa: </span>
-                  {formData.web}
-                </p>
-                <p className="text-white">
-                  <span className="font-medium text-gray-300">Cargo: </span>
-                  {formData.cargo}
-                </p>
-                <p className="text-white">
-                  <span className="font-medium text-gray-300">Sector: </span>
-                  {formData.sector}
-                </p>
+                <div className="space-y-2 text-sm">
+                  <p className="text-white">
+                    <span className="font-medium text-gray-300">Nombre: </span>
+                    {formData.nombre} {formData.apellidos}
+                  </p>
+                  <p className="text-white">
+                    <span className="font-medium text-gray-300">Email: </span>
+                    {formData.email}
+                  </p>
+                  <p className="text-white">
+                    <span className="font-medium text-gray-300">Teléfono: </span>
+                    {formData.telefono}
+                  </p>
+                  <p className="text-white">
+                    <span className="font-medium text-gray-300">Empresa: </span>
+                    {formData.empresa}
+                  </p>
+                  <p className="text-white">
+                    <span className="font-medium text-gray-300">Web Empresa: </span>
+                    {formData.web}
+                  </p>
+                  <p className="text-white">
+                    <span className="font-medium text-gray-300">Cargo: </span>
+                    {formData.cargo}
+                  </p>
+                  <p className="text-white">
+                    <span className="font-medium text-gray-300">Sector: </span>
+                    {formData.sector}
+                  </p>
+                </div>
               </div>
-            </div>
-          )}
+            )}
+          </div>
 
           {/* Botones */}
           <div className="mt-8 flex items-center justify-between">
