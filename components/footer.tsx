@@ -1,61 +1,102 @@
 "use client"
 
-import { useState, useRef, useEffect } from "react"
-
 export default function Footer() {
-  const [step, setStep] = useState<number>(1)
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    message: "",
-  })
-  const [submitted, setSubmitted] = useState(false)
-  const [showSuccess, setShowSuccess] = useState(false)
-
-  useEffect(() => {
-    if (submitted) {
-      setShowSuccess(false)
-      const timer = setTimeout(() => {
-        setShowSuccess(true)
-      }, 10)
-      return () => clearTimeout(timer)
-    } else {
-      setShowSuccess(false)
-    }
-  }, [submitted])
-
-  // ... handlers like handleChange, handleNext, handleSubmit, etc.
-
   return (
-    <div>
-      {submitted ? (
-        <div
-          className={`text-center space-y-4 transition-all duration-300 ease-out transform ${
-            showSuccess ? "opacity-100 translate-y-0" : "opacity-0 translate-y-2"
-          }`}
-        >
-          <h2
-            className="text-2xl md:text-3xl font-alias text-white"
-            style={{ textShadow: "0 2px 4px rgba(0,0,0,0.35), 0 6px 12px rgba(0,0,0,0.25)" }}
-          >
-            Solicitud enviada con éxito
-          </h2>
-          <p className="text-gray-300 font-montserrat text-sm md:text-base">
-            Gracias por solicitar una consultoría con SolAI. Hemos recibido tus datos y en breve nos pondremos en contacto contigo para coordinar el día y la hora de la sesión.
-          </p>
-          <p className="text-gray-400 font-montserrat text-xs md:text-sm max-w-xl mx-auto">
-            Revisa tu bandeja de entrada y también la carpeta de spam, y añade
-            <span className="font-semibold"> hola@wesolai.com </span>
-            a tus contactos para asegurarte de que recibes todos nuestros correos sin problemas.
+    <footer className="bg-[#0b1224] border-t border-[#1D4ED8]/30 relative z-20">
+      <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-14">
+        <div className="grid gap-10 md:gap-12 lg:grid-cols-3">
+          <div className="space-y-4">
+            <div className="flex items-center gap-3">
+              <img
+                src="/logos/logo_white.png"
+                alt="SolAI"
+                className="h-10 w-auto object-contain"
+              />
+              <div>
+                <p className="text-sm text-gray-300 font-montserrat">
+                  SolAI Labs LLC
+                </p>
+                <p className="text-sm text-gray-400 font-montserrat">
+                  IA estratégica para multiplicar tu negocio.
+                </p>
+              </div>
+            </div>
+            <p className="text-gray-300 font-montserrat leading-relaxed max-w-md">
+              Diseñamos solvers y automatizaciones a medida para que tu equipo gane velocidad, precisión y foco estratégico.
+            </p>
+            <a
+              href="/consultoria"
+              className="inline-flex items-center justify-center rounded-full bg-[#1D4ED8] px-5 py-3 text-sm font-semibold text-white hover:bg-[#3B82F6] transition btn-anim"
+            >
+              Agendar consultoría
+            </a>
+          </div>
+
+          <div className="grid grid-cols-2 gap-8 lg:col-span-2">
+            <div className="space-y-3">
+              <h3 className="text-white font-alias text-lg">Navegación</h3>
+              <ul className="space-y-2 text-gray-300 font-montserrat text-sm">
+                <li>
+                  <a href="/#solvers" className="hover:text-white transition link-anim">
+                    Solvers
+                  </a>
+                </li>
+                <li>
+                  <a href="/#faq" className="hover:text-white transition link-anim">
+                    FAQ
+                  </a>
+                </li>
+                <li>
+                  <a href="/consultoria" className="hover:text-white transition link-anim">
+                    Consultoría
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-3">
+              <h3 className="text-white font-alias text-lg">Legal</h3>
+              <ul className="space-y-2 text-gray-300 font-montserrat text-sm">
+                <li>
+                  <a href="/aviso-legal" className="hover:text-white transition link-anim">
+                    Aviso legal
+                  </a>
+                </li>
+                <li>
+                  <a href="/politica-privacidad" className="hover:text-white transition link-anim">
+                    Política de privacidad
+                  </a>
+                </li>
+                <li>
+                  <a href="/politica-cookies" className="hover:text-white transition link-anim">
+                    Política de cookies
+                  </a>
+                </li>
+              </ul>
+            </div>
+
+            <div className="space-y-3">
+              <h3 className="text-white font-alias text-lg">Contacto</h3>
+              <ul className="space-y-2 text-gray-300 font-montserrat text-sm">
+                <li>
+                  <a href="mailto:hola@wesolai.com" className="hover:text-white transition link-anim">
+                    hola@wesolai.com
+                  </a>
+                </li>
+                <li className="text-gray-400">+34 919 93 30 75</li>
+                <li className="text-gray-400">Barrio Alceda 149B, Cantabria, España</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+
+        <div className="mt-10 border-t border-white/10 pt-6 text-gray-400 text-xs font-montserrat flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
+          <p>© {new Date().getFullYear()} SolAI Labs LLC. Todos los derechos reservados.</p>
+          <p className="text-gray-500">
+            Construido con precisión y visión estratégica.
           </p>
         </div>
-      ) : (
-        // formulario
-        <form>
-          {/* form fields and buttons here */}
-        </form>
-      )}
-    </div>
+      </div>
+    </footer>
   )
 }
