@@ -1,4 +1,3 @@
-import { Navbar } from "@/components/navbar"
 import { Hero } from "@/components/hero"
 import { LevelsSection } from "@/components/levels-section"
 import { ConsultingSection } from "@/components/consulting-section"
@@ -7,12 +6,10 @@ import { ProcessSection } from "@/components/process-section"
 import { TestimonialsSection } from "@/components/testimonials-section"
 import { FAQSection } from "@/components/faq-section"
 import { FinalCTA } from "@/components/final-cta"
-import Footer from "@/components/footer"
 
 export default function Home() {
   return (
-    <main className="relative z-10 min-h-screen pt-24 page-fade">
-      <Navbar />
+    <div className="relative z-10 min-h-screen pt-24 page-fade">
       <Hero />
       <LevelsSection />
       <ConsultingSection />
@@ -21,7 +18,6 @@ export default function Home() {
       <TestimonialsSection />
       <FAQSection />
       <FinalCTA />
-      <Footer />
-    </main>
+    </div>
   )
 }

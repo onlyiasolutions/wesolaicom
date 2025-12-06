@@ -4,8 +4,10 @@ import type { Metadata } from "next"
 import { Montserrat } from "next/font/google"
 import localFont from "next/font/local"
 import "./globals.css"
+import Footer from "@/components/footer"
 import { ParallaxBackground } from "@/components/parallax-background"
 import { MouseLightEffect } from "@/components/mouse-light-effect"
+import { Navbar } from "@/components/navbar"
 
 const montserrat = Montserrat({
   subsets: ["latin"],
@@ -66,13 +68,17 @@ export default function RootLayout({
         {/* End cookieyes banner */}
       </head>
       <body
-        className={`${montserrat.variable} ${alias.variable} ${playfair.variable} font-montserrat antialiased bg-slate-950 text-slate-50 selection:bg-blue-500/30 selection:text-slate-50`}
+        className={`${montserrat.variable} ${alias.variable} ${playfair.variable} font-montserrat antialiased bg-slate-950 text-slate-50 selection:bg-blue-500/30 selection:text-slate-50 min-h-screen flex flex-col`}
       >
-        <div className="relative min-h-screen overflow-hidden">
+        <div className="relative flex-1 overflow-hidden">
           <ParallaxBackground />
           <MouseLightEffect />
-          {children}
+          <Navbar />
+          <main className="relative z-10">
+            {children}
+          </main>
         </div>
+        <Footer />
       </body>
     </html>
   )
