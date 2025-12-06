@@ -4,7 +4,7 @@ export default function Footer() {
   return (
     <footer className="bg-[#0b1224] border-t border-[#1D4ED8]/30 relative z-20">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 py-12 md:py-14">
-        <div className="grid gap-10 md:gap-12 lg:grid-cols-3">
+        <div className="grid grid-cols-1 md:grid-cols-5 gap-10 md:gap-12">
           <div className="space-y-4">
             <div className="flex items-center gap-3">
               <img
@@ -32,61 +32,95 @@ export default function Footer() {
             </a>
           </div>
 
-          <div className="grid grid-cols-2 gap-8 lg:col-span-2">
-            <div className="space-y-3">
-              <h3 className="text-white font-alias text-lg">Navegación</h3>
-              <ul className="space-y-2 text-gray-300 font-montserrat text-sm">
-                <li>
-                  <a href="/#solvers" className="hover:text-white transition link-anim">
-                    Solvers
-                  </a>
-                </li>
-                <li>
-                  <a href="/#faq" className="hover:text-white transition link-anim">
-                    FAQ
-                  </a>
-                </li>
-                <li>
-                  <a href="/consultoria" className="hover:text-white transition link-anim">
-                    Consultoría
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div className="space-y-3">
+            <h3 className="text-white font-alias text-lg">Navegación</h3>
+            <ul className="space-y-2 text-gray-300 font-montserrat text-sm">
+              <li>
+                <a href="/#solvers" className="hover:text-white transition link-anim">
+                  Solvers
+                </a>
+              </li>
+              <li>
+                <a href="/#faq" className="hover:text-white transition link-anim">
+                  FAQ
+                </a>
+              </li>
+              <li>
+                <a href="/consultoria" className="hover:text-white transition link-anim">
+                  Consultoría
+                </a>
+              </li>
+            </ul>
+          </div>
 
-            <div className="space-y-3">
-              <h3 className="text-white font-alias text-lg">Legal</h3>
-              <ul className="space-y-2 text-gray-300 font-montserrat text-sm">
-                <li>
-                  <a href="/aviso-legal" className="hover:text-white transition link-anim">
-                    Aviso legal
-                  </a>
-                </li>
-                <li>
-                  <a href="/politica-privacidad" className="hover:text-white transition link-anim">
-                    Política de privacidad
-                  </a>
-                </li>
-                <li>
-                  <a href="/politica-cookies" className="hover:text-white transition link-anim">
-                    Política de cookies
-                  </a>
-                </li>
-              </ul>
-            </div>
+          <div className="space-y-3">
+            <h3 className="text-white font-alias text-lg">Legal</h3>
+            <ul className="space-y-2 text-gray-300 font-montserrat text-sm">
+              <li>
+                <a href="/aviso-legal" className="hover:text-white transition link-anim">
+                  Aviso legal
+                </a>
+              </li>
+              <li>
+                <a href="/politica-privacidad" className="hover:text-white transition link-anim">
+                  Política de privacidad
+                </a>
+              </li>
+              <li>
+                <a href="/politica-cookies" className="hover:text-white transition link-anim">
+                  Política de cookies
+                </a>
+              </li>
+            </ul>
+          </div>
 
-            <div className="space-y-3">
-              <h3 className="text-white font-alias text-lg">Contacto</h3>
-              <ul className="space-y-2 text-gray-300 font-montserrat text-sm">
-                <li>
-                  <a href="mailto:hola@wesolai.com" className="hover:text-white transition link-anim">
-                    hola@wesolai.com
-                  </a>
-                </li>
-                <li className="text-gray-400">+34 919 93 30 75</li>
-                <li className="text-gray-400">Barrio Alceda 149B, Cantabria, España</li>
-              </ul>
-            </div>
+          <div className="space-y-3">
+            <h3 className="text-white font-alias text-lg">Contacto</h3>
+            <ul className="space-y-2 text-gray-300 font-montserrat text-sm">
+              <li>
+                <a href="mailto:hola@wesolai.com" className="hover:text-white transition link-anim">
+                  hola@wesolai.com
+                </a>
+              </li>
+              <li className="text-gray-400">+34 919 93 30 75</li>
+              <li className="text-gray-400">Barrio Alceda 149B, Cantabria, España</li>
+            </ul>
+          </div>
+
+          <div className="space-y-3">
+            <h3 className="text-white font-alias text-lg">Síguenos</h3>
+            <ul className="space-y-2 text-gray-300 font-montserrat text-sm">
+              <li>
+                <a
+                  href="https://www.instagram.com/wesolai"
+                  className="hover:text-white transition link-anim"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Instagram
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.linkedin.com/company/solai-labs"
+                  className="hover:text-white transition link-anim"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  LinkedIn
+                </a>
+              </li>
+              <li>
+                <a
+                  href="https://www.facebook.com/@wesolai"
+                  className="hover:text-white transition link-anim"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  Facebook
+                </a>
+              </li>
+            </ul>
           </div>
         </div>
 
